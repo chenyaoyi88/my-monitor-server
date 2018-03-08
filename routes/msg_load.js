@@ -2,9 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  const query = req.query;
-  console.log(query);
+router.post('/', function(req, res, next) {
+  const body = req.body;
+  console.log(req.headers.referer);
+  console.log(body);
+
   res.send({
     code: '0000',
     msg: 'success',
